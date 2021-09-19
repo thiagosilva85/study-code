@@ -16,4 +16,12 @@ def busca_linear(A, n, x):
         if(A[i] == x): resposta = i
     return resposta
 
-busca_linear(A, n, x)
+def busca_lienar_melhorada(A, n, x):
+    resposta = -1
+    for i in range(0, n):
+        if (A[i == x]):
+            resposta = i
+            break
+    return resposta
+
+busca_lienar_melhorada(A, n, x)
