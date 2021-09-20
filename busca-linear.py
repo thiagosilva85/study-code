@@ -24,4 +24,21 @@ def busca_lienar_melhorada(A, n, x):
             break
     return resposta
 
-busca_lienar_melhorada(A, n, x)
+def busca_linear_sentinela(A, n, x):
+    resposta = -1
+    
+    ultimo = A[n - 1]
+    A[n - 1] = x
+    i = 0
+
+    while (A[i] != x):
+        i += 1
+    
+    A[n - 1] = ultimo
+
+    if ((i < n - 1) or (A[n - 1] == x)):
+        resposta = i
+    
+    return resposta
+
+
