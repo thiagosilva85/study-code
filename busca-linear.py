@@ -1,7 +1,7 @@
 import time
 import random
 
-random.seed(100000)
+random.seed(1000)
 
 sorteio_tamanho_vetor = random.randrange(1000000,10000000)
 print("\nTamanho do vetor: ", sorteio_tamanho_vetor)
@@ -9,7 +9,7 @@ print("=================================")
 
 A = [random.randint(0,1000) for i in range(sorteio_tamanho_vetor)]
 n = len(A)
-x = 25
+x = 1000
 
 def busca_linear(A, n, x):
     resposta = -1
@@ -45,21 +45,25 @@ def busca_linear_sentinela(A, n, x):
     
     return resposta
 
+#Chamando as funções definidas
 
+#Busca Linear
 inicia_tempo = time.time_ns()
 saida = busca_linear(A, n, x)
 termina_tempo = time.time_ns()
 tempo = termina_tempo - inicia_tempo
 print("\nBusca Linear")
-print("Resposta = ", saida, " em ", tempo, "ns.")
+print("Resposta = ", saida, " em ", tempo, "ns.\n")
 
+#Busca Linear Melhorada
 inicia_tempo = time.time_ns()
 saida = busca_linear_melhorada(A, n, x)
 termina_tempo = time.time_ns()
 tempo = termina_tempo - inicia_tempo
 print("\nBusca Linear Melhorada")
-print("Resposta = ", saida, " em ", tempo, "ns.")
+print("Resposta = ", saida, " em ", tempo, "ns.\n")
 
+#Busca Linear com Sentinela
 inicia_tempo = time.time_ns()
 saida = busca_linear_sentinela(A, n, x)
 termina_tempo = time.time_ns()
